@@ -1,5 +1,6 @@
 package br.com.alura;
 
+import br.com.alura.modelos.Pessoa;
 import br.com.alura.modelos.Titulo;
 
 import java.util.*;
@@ -7,7 +8,7 @@ import java.util.*;
 public class Principal {
     public static void main(String[] args) {
         //exercicio 1
-        System.out.println("\nExercício 1:\n");
+        System.out.println("\nExercício 1:");
         List<Integer> listaNumeros = new LinkedList<>();
         Random gerador = new Random();
 
@@ -18,12 +19,12 @@ public class Principal {
         }
 
         //saídas do exercício 1
-        System.out.println("Lista de números antes de ordenar: " + listaNumeros);
+        System.out.println("\nLista de números antes de ordenar: " + listaNumeros);
         Collections.sort(listaNumeros);
         System.out.println("\nLista de números após ordenar: " + listaNumeros);
 
         //exercicio 2
-        System.out.println("\nExercício 2:\n");
+        System.out.println("\nExercício 2:");
         List<Titulo> listaTitulos = new LinkedList<>();
 
         //criação dos títulos
@@ -40,11 +41,31 @@ public class Principal {
         listaTitulos.add(titulo4);
         listaTitulos.add(titulo5);
 
-        System.out.println("Lista de títulos antes de organizar alfabeticamente:\n" + listaTitulos);
+        System.out.println("\nLista de títulos antes de organizar alfabeticamente:\n" + listaTitulos);
 
-        //acessa os elementos da lista e os organiza em ordem alfabetica
-        listaTitulos.sort(Comparator.comparing(Titulo::getNome));
+        //exercicio 3
+        //acessa os elementos da lista de títulos e os organiza em ordem alfabetica
+        //é possível utilizar também -> listaTitulos.sort(Comparator.comparing(Titulo::getNome));
+        System.out.println("\nExercício 3");
+        Collections.sort(listaTitulos);
         System.out.println("\nLista de títulos depois de organizar alfabeticamente:\n" + listaTitulos);
 
+        //exercicio 4
+        System.out.println("\nExercício 4:");
+        List<Pessoa> listaPessoas = new ArrayList<>();
+
+        //adiciona objetos na lista já criando objetos
+        listaPessoas.add(new Pessoa("Alice", 30));
+        listaPessoas.add(new Pessoa("Bob", 25));
+        listaPessoas.add(new Pessoa("Charlie", 35));
+
+        System.out.println("\nLista de pessoas com ArrayList:\n" + listaPessoas);
+
+        List<Pessoa> listaPessoasLinkedlist = new LinkedList<>();
+        listaPessoasLinkedlist.add(new Pessoa("David", 28));
+        listaPessoasLinkedlist.add(new Pessoa("Eva", 22));
+        listaPessoasLinkedlist.add(new Pessoa("Frank", 40));
+
+        System.out.println("\nLista de pessoas com Linkedlist:\n" + listaPessoasLinkedlist);
     }
 }
