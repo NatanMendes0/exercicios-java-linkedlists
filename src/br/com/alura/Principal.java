@@ -50,7 +50,7 @@ public class Principal {
         Collections.sort(listaTitulos);
         System.out.println("\nLista de títulos depois de organizar alfabeticamente:\n" + listaTitulos);
 
-        //exercicio 4
+        //exercicio 4 e 5
         System.out.println("\nExercício 4:");
         List<Pessoa> listaPessoas = new ArrayList<>();
 
@@ -62,6 +62,8 @@ public class Principal {
         System.out.println("\nLista de pessoas com ArrayList:\n" + listaPessoas);
 
         List<Pessoa> listaPessoasLinkedlist = new LinkedList<>();
+
+        //adiciona objetos na lista já criando objetos
         listaPessoasLinkedlist.add(new Pessoa("David", 28));
         listaPessoasLinkedlist.add(new Pessoa("Eva", 22));
         listaPessoasLinkedlist.add(new Pessoa("Frank", 40));
